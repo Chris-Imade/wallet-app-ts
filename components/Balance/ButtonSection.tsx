@@ -8,6 +8,7 @@ const ButtonSectionBackground = styled.View`
     width: 100%;
     align-items: center;
     flex: 1;
+    margin-top: 30px;
 `;
 
 const ButtonSection: FunctionComponent = () => {

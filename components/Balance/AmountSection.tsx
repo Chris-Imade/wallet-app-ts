@@ -11,6 +11,7 @@ const AmountSectionBackground = styled.View`
     padding-top: 5px;
     align-items: center;
     flex: 1;
+    margin-top: 30px;
 `;
 
 const AmountSection: FunctionComponent<AmountProps> = (props) => {

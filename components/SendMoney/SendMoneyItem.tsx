@@ -21,6 +21,8 @@ const SendMoneyItemContainer = styled.TouchableHighlight`
 
 
 const SendMoneyItem: FunctionComponent<SendMoneyProps> = (props) => {
+    console.log(props);
+    console.log("From sendMoneyItem");
     return (
         <SendMoneyItemContainer
             underlayColor={colors.secondary}

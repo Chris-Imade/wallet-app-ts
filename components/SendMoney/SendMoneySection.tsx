@@ -18,7 +18,7 @@ const SendMoneySectionBackground = styled.View`
 `;
 
 const SendMoneyRow = styled.View`
-    flex-directoin: row;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -35,6 +35,8 @@ const SendMoneyList = styled.FlatList`
 const TextButton = styled.TouchableOpacity``;
 
 const SendMoneySection: FunctionComponent<SendMoneySectionProps> = (props) => {
+
+
 
     const sheetRef = React.useRef<BottomSheet>(null);
 
@@ -57,11 +59,19 @@ const SendMoneySection: FunctionComponent<SendMoneySectionProps> = (props) => {
                     contentContainerStyle={{
                         alignItems: "flex-start",
                     }}
-                    horizontal={false}
-                    showsVerticalScrollIndicator={false}
-                    numColumns={3}
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    // numColumns={3}
                     keyExtractor={({ id }: any) => id.toString()}
-                    renderItem={({ data }: any) => <SendMoneyItem {...data} />}
+                    renderItem={({ item }: any) => {
+                        return (
+                            <>
+                                {console.log(item)}
+                                {console.log("from inside renderItem")}
+                                <SendMoneyItem {...item} />
+                            </>
+                        )
+                    }}
                 />
             </SendMoneySectionBackground>
         )

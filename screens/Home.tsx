@@ -11,7 +11,9 @@ import TransactionSection from '../components/Transactions/TransactionSection';
 import SendMoneySection from '../components/SendMoney/SendMoneySection';
 import { RootStackParamsList } from "../navigation/RootStack";
 import { StackScreenProps } from "@react-navigation/stack";
-import { potraits } from '../assets/potraits';
+import potrait1 from "../assets/potraits/potrait-1.jpg";
+import potrait2 from "../assets/potraits/potrait-2.jpg";
+import potrait3 from "../assets/potraits/potrait-3.jpg";
 // types
 export type Props = StackScreenProps<RootStackParamsList, "Home">;
 
@@ -91,21 +93,21 @@ const Home: FunctionComponent = () => {
             amount: "2450.56",
             name: "Coby Andoh",
             background: colors.tertiary,
-            img: potraits.potrait1
+            img: potrait1
         },
         {
             id: 2,
             amount: "4450.56",
             name: "Harleen Scot",
             background: colors.primary,
-            img: potraits.potrait2
+            img: potrait2
         },
         {
             id: 3,
             amount: "6250.56",
             name: "Bob Ryan",
             background: colors.accent,
-            img: potraits.potrait3
+            img: potrait3
         }
     ];
 
@@ -114,7 +116,7 @@ const Home: FunctionComponent = () => {
             <StatusBar style="dark" />
             <CardSection data={cardData} />
             <TransactionSection data={transactionData} />
-            <SendMoneySection  data={sendMoneyData} />
+            <SendMoneySection data={sendMoneyData} />
         </HomeContainer>
     )
 }
